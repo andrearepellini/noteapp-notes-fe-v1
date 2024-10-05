@@ -6,12 +6,14 @@
 
 <ul>
     {#each notes as note}
-        <li class="border p-4 mb-2">
-            <div>
+        <li class="border p-4 mb-2 flex items-center">
+            <div class="flex-grow">
                 <h2 class="font-bold">{note.title}</h2>
                 <p>{note.content}</p>
             </div>
-            <DeleteNote {deleteNote} noteId={note.id} />
+            <div class="ml-4">
+                <DeleteNote {deleteNote} noteId={note.id} />
+            </div>
         </li>
     {/each}
 </ul>
